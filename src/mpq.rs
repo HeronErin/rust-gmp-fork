@@ -15,8 +15,8 @@ use num_traits::{Zero, One};
 
 #[repr(C)]
 pub struct mpq_struct {
-    _mp_num: mpz_struct,
-    _mp_den: mpz_struct
+    pub  _mp_num: mpz_struct,
+    pub  _mp_den: mpz_struct
 }
 
 pub type mpq_srcptr = *const mpq_struct;
