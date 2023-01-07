@@ -24,30 +24,31 @@ pub type mpq_ptr = *mut mpq_struct;
 
 #[link(name = "gmp")]
 extern "C" {
-    fn __gmpq_init(x: mpq_ptr);
-    fn __gmpq_clear(x: mpq_ptr);
-    fn __gmpq_set(rop: mpq_ptr, op: mpq_srcptr);
-    fn __gmpq_set_z(rop: mpq_ptr, op: mpz_srcptr);
-    fn __gmpq_set_ui(rop: mpq_ptr, op1: c_ulong, op2: c_ulong);
-    fn __gmpq_set_d(rop: mpq_ptr, op: c_double);
-    fn __gmpq_set_f(rop: mpq_ptr, op: mpf_srcptr);
-    fn __gmpq_cmp(op1: mpq_srcptr, op2: mpq_srcptr) -> c_int;
-    fn __gmpq_cmp_ui(op1: mpq_srcptr, num2: c_ulong, den2: c_ulong) -> c_int;
-    fn __gmpq_equal(op1: mpq_srcptr, op2: mpq_srcptr) -> c_int;
-    fn __gmpq_add(sum: mpq_ptr, addend1: mpq_srcptr, addend2: mpq_srcptr);
-    fn __gmpq_sub(difference: mpq_ptr, minuend: mpq_srcptr, subtrahend: mpq_srcptr);
-    fn __gmpq_mul(product: mpq_ptr, multiplier: mpq_srcptr, multiplicand: mpq_srcptr);
-    fn __gmpq_div(product: mpq_ptr, multiplier: mpq_srcptr, multiplicand: mpq_srcptr);
-    fn __gmpq_neg(negated_operand: mpq_ptr, operand: mpq_srcptr);
-    fn __gmpq_abs(rop: mpq_ptr, op: mpq_srcptr);
-    fn __gmpq_inv(inverted_number: mpq_ptr, number: mpq_srcptr);
-    fn __gmpq_get_num(numerator: mpz_ptr, rational: mpq_srcptr);
-    fn __gmpq_get_den(denominator: mpz_ptr, rational: mpq_srcptr);
-    fn __gmpq_set_num(rational: mpq_ptr, numerator: mpz_srcptr);
-    fn __gmpq_set_den(rational: mpq_ptr, denominator: mpz_srcptr);
-    fn __gmpq_canonicalize(rational: mpq_ptr);
-    fn __gmpq_get_d(rational: mpq_srcptr) -> c_double;
-    fn __gmpq_set_str(rop: mpq_ptr, str: *const c_char, base: c_int) -> c_int;
+ 
+    pub fn __gmpq_init(x: mpq_ptr);
+    pub fn __gmpq_clear(x: mpq_ptr);
+    pub fn __gmpq_set(rop: mpq_ptr, op: mpq_srcptr);
+    pub fn __gmpq_set_z(rop: mpq_ptr, op: mpz_srcptr);
+    pub fn __gmpq_set_ui(rop: mpq_ptr, op1: c_ulong, op2: c_ulong);
+    pub fn __gmpq_set_d(rop: mpq_ptr, op: c_double);
+    pub fn __gmpq_set_f(rop: mpq_ptr, op: mpf_srcptr);
+    pub fn __gmpq_cmp(op1: mpq_srcptr, op2: mpq_srcptr) -> c_int;
+    pub fn __gmpq_cmp_ui(op1: mpq_srcptr, num2: c_ulong, den2: c_ulong) -> c_int;
+    pub fn __gmpq_equal(op1: mpq_srcptr, op2: mpq_srcptr) -> c_int;
+    pub fn __gmpq_add(sum: mpq_ptr, addend1: mpq_srcptr, addend2: mpq_srcptr);
+    pub fn __gmpq_sub(difference: mpq_ptr, minuend: mpq_srcptr, subtrahend: mpq_srcptr);
+    pub fn __gmpq_mul(product: mpq_ptr, multiplier: mpq_srcptr, multiplicand: mpq_srcptr);
+    pub fn __gmpq_div(product: mpq_ptr, multiplier: mpq_srcptr, multiplicand: mpq_srcptr);
+    pub fn __gmpq_neg(negated_operand: mpq_ptr, operand: mpq_srcptr);
+    pub fn __gmpq_abs(rop: mpq_ptr, op: mpq_srcptr);
+    pub fn __gmpq_inv(inverted_number: mpq_ptr, number: mpq_srcptr);
+    pub fn __gmpq_get_num(numerator: mpz_ptr, rational: mpq_srcptr);
+    pub fn __gmpq_get_den(denominator: mpz_ptr, rational: mpq_srcptr);
+    pub fn __gmpq_set_num(rational: mpq_ptr, numerator: mpz_srcptr);
+    pub fn __gmpq_set_den(rational: mpq_ptr, denominator: mpz_srcptr);
+    pub fn __gmpq_canonicalize(rational: mpq_ptr);
+    pub fn __gmpq_get_d(rational: mpq_srcptr) -> c_double;
+    pub fn __gmpq_set_str(rop: mpq_ptr, str: *const c_char, base: c_int) -> c_int;
 }
 
 pub struct Mpq {
