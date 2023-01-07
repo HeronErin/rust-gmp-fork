@@ -16,9 +16,9 @@ use ffi::*;
 
 #[repr(C)]
 pub struct mpz_struct {
-    _mp_alloc: c_int,
-    _mp_size: c_int,
-    _mp_d: *mut c_void
+    pub _mp_alloc: c_int,
+    pub _mp_size: c_int,
+    pub _mp_d: *mut c_void
 }
 
 pub type mp_limb_t = usize; // TODO: Find a way to use __gmp_bits_per_limb instead.
