@@ -98,7 +98,7 @@ extern "C" {
 }
 
 pub struct Mpz {
-    mpz: mpz_struct,
+    pub mpz: mpz_struct,
 }
 
 unsafe impl Send for Mpz { }
