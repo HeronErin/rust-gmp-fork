@@ -16,10 +16,10 @@ type mp_exp_t = c_long;
 
 #[repr(C)]
 pub struct mpf_struct {
-    _mp_prec: c_int,
-    _mp_size: c_int,
-    _mp_exp: mp_exp_t,
-    _mp_d: *mut c_void
+    pub _mp_prec: c_int,
+    pub _mp_size: c_int,
+    pub _mp_exp: mp_exp_t,
+    pub _mp_d: *mut c_void
 }
 
 pub type mpf_srcptr = *const mpf_struct;
