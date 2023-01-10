@@ -99,6 +99,8 @@ extern "C" {
 
 
    pub fn __gmpz_fac_ui(rot: mpz_ptr, n: c_ulong);
+	
+   pub fn __gmpz_prodlimbs(x:mpz_ptr, factors:mp_ptr, j:c_int)) -> c_int;
 
 
 }
