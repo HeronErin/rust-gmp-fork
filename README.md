@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/fizyk20/rust-gmp.svg?branch=master)](https://travis-ci.org/fizyk20/rust-gmp)
 
-
+`toml
+rust-gmp = {git = "https://github.com/HeronErin/rust-gmp-fork"}
+`
 
 # Forked to make struct fields public for fixed point mathmatics
 
