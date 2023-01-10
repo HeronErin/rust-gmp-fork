@@ -95,7 +95,13 @@ extern "C" {
     pub fn __gmpz_sqrt(rop: mpz_ptr, op: mpz_srcptr);
     pub fn __gmpz_millerrabin(n: mpz_srcptr, reps: c_int) -> c_int;
     pub fn __gmpz_urandomb(rop: mpz_ptr, state: gmp_randstate_t, n: mp_bitcnt_t);
-    pub fn __gmpz_urandomm(rop: mpz_ptr, state: gmp_randstate_t, n: mpz_srcptr);}
+    pub fn __gmpz_urandomm(rop: mpz_ptr, state: gmp_randstate_t, n: mpz_srcptr);
+
+
+   pub fn __gmpz__fac_ui (rop: mpz_ptr, n:c_ulong);
+
+}
+
 
 pub struct Mpz {
     pub mpz: mpz_struct,
