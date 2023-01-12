@@ -103,7 +103,7 @@ extern "C" {
    pub fn __gmpz_prodlimbs(x:mpz_ptr, factors:mpz_ptr, j:c_int) -> c_int;
 
 	
-   pub fn __gmpn_mul_1(rp : mpz_ptr, s1p: mpz_ptr, n: size_t, s2limb : c_ulong) -> c_ulong;
+//    pub fn __gmpz_mul_1(rp : mpz_ptr, s1p: mpz_srcptr, n: size_t, s2limb : c_ulong) -> c_ulong;
 
 
 }
