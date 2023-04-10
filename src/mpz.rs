@@ -67,6 +67,7 @@ extern "C" {
     pub fn __gmpz_fdiv_q_2exp(q: mpz_ptr, n: mpz_srcptr, b: mp_bitcnt_t);
     pub fn __gmpz_mod(r: mpz_ptr, n: mpz_srcptr, d: mpz_srcptr);
     pub fn __gmpz_divisible_p(n: mpz_srcptr, d: mpz_srcptr) -> c_int;
+    pub fn __gmpz_divisible_ui_p(n: mpz_srcptr, d: c_ulong) -> c_int;
     pub fn __gmpz_and(rop: mpz_ptr, op1: mpz_srcptr, op2: mpz_srcptr);
     pub fn __gmpz_ior(rop: mpz_ptr, op1: mpz_srcptr, op2: mpz_srcptr);
     pub fn __gmpz_xor(rop: mpz_ptr, op1: mpz_srcptr, op2: mpz_srcptr);
